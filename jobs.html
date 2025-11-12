@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виды работ для подростков</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Автоматическая вставка текущей даты
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            const dateString = `обновлено ${day}.${month}.${year}`;
+            document.getElementById('update-date').textContent = dateString;
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Виды работ для подростков</h1>
+        <p id="update-date">обновлено ...</p>
+    </header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="jobs.html">Виды работ</a>
+        <a href="documents.html">Документы</a>
+        <a href="where-to-get.html">Где получить</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Актуальные вакансии</h2>
+            
+            <!-- Вакансии для 14+ -->
+            <h3>От 14 лет</h3>
+            <table>
+                <tr>
+                    <th>Вид работы</th>
+                    <th>Описание</th>
+                    <th>Контакты</th>
+                </tr>
+                <tr>
+                    <td>Курьер (доставка еды)</td>
+                    <td>График 3/2, зарплата 450 руб/день + чаевые.</td>
+                    <td>
+                        МФЦ "Северный"<br>
+                        тел. +7 (343) 123-45-67<br>
+                        email: mfc-sever@mail.ru
+                    </td>
+                </tr>
+                <tr>
+                    <td>Волонтёр (помощь на мероприятиях)</td>
+                    <td>Работа на городских праздниках, бесплатно, но даёт опыт.</td>
+                    <td>
+                        МФЦ "Центральный"<br>
+                        тел. +7 (343) 234-56-78<br>
+                        email: mfc-centr@mail.ru
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Вакансии для 16+ -->
+            <h3>От 16 лет</h3>
+            <table>
+                <tr>
+                    <th>Вид работы</th>
+                    <th>Описание</th>
+                    <th>Контакты</th>
+                </tr>
+                <tr>
+                    <td>Промоутер на новогодние мероприятия</td>
+                    <td>Раздача подарков, работа на ёлках. Зарплата: 600 руб/день.</td>
+                    <td>
+                        МФЦ "Центральный"<br>
+                        тел. +7 (343) 345-67-89<br>
+                        email: mfc-centr@mail.ru
+                    </td>
+                </tr>
+                <tr>
+                    <td>Оператор call-центра</td>
+                    <td>Общение с клиентами по телефону, зарплата 500 руб/день.</td>
+                    <td>
+                        МФЦ "Южный"<br>
+                        тел. +7 (343) 456-78-90<br>
+                        email: mfc-yug@mail.ru
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Работа для подростков. Все права защищены.</p>
+    </footer>
+</body>
+</html>

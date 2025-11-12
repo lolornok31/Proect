@@ -1,0 +1,191 @@
+/* Sincere Professional Style */
+:root {
+    --primary-color: #1E3A5F;
+    --secondary-color: #6C9BCF;
+    --light-color: #F5F5F5;
+    --text-color: #333;
+    --text-light: #fff;
+    --font-headings: 'Playfair Display', serif;
+    --font-main: 'Open Sans', sans-serif;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+header {
+    background: var(--primary-color) url('https://объясняем.рф/wp-content/uploads/2023/06/podrostki_starshe_14_let_mogut_ustroitsya_na_rabotu_s_soglasiya_odnogo_iz_roditeley.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--text-light);
+    padding: 5rem 1rem 3rem;
+    text-align: center;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 58, 95, 0.8);
+    z-index: 1;
+}
+
+header h1,
+header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+nav {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius);
+    margin: 0 0.5rem;
+}
+
+nav a:hover {
+    background: var(--secondary-color);
+}
+
+main {
+    padding: 2.5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: var(--text-light);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f0f7ff;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: 80%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
