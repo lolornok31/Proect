@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Где получить документы для трудоустройства</title>
+    <title>Где получить документы</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
         <h1>Где получить документы</h1>
+        <p id="update-date">Адреса и контакты</p>
     </header>
     <nav>
-        <a href="index.html">Главная</a>
-        <a href="jobs.html">Виды работ</a>
-        <a href="documents.html">Документы</a>
-        <a href="where-to-get.html">Где получить</a>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="jobs.html">Виды работ</a></li>
+            <li><a href="documents.html">Документы</a></li>
+            <li><a href="where-to-get.html">Где получить</a></li>
+        </ul>
     </nav>
     <main>
-        <section>
-            <h2>Адреса и контакты</h2>
-            <table>
-                <tr>
-                    <th>Документ</th>
-                    <th>Где получить</th>
-                    <th>Контакты/адрес</th>
-                </tr>
-                <tr>
-                    <td>Паспорт</td>
-                    <td>МФЦ или паспортный стол</td>
-                    <td>Адрес ближайшего МФЦ: <a href="https://мфц.рф">мфц.рф</a></td>
-                </tr>
-                <tr>
-                    <td>ИНН</td>
-                    <td>Налоговая инспекция или через сайт ФНС</td>
-                    <td><a href="https://www.nalog.ru">www.nalog.ru</a></td>
-                </tr>
-                <tr>
-                    <td>СНИЛС</td>
-                    <td>МФЦ или Пенсионный фонд</td>
-                    <td><a href="https://www.pfrf.ru">www.pfrf.ru</a></td>
-                </tr>
-            </table>
-        </section>
+        <div class="section-card">
+            <h3>Паспорт</h3>
+            <div class="content">
+                <p>МФЦ или паспортный стол по месту жительства.</p>
+                <p>Адрес ближайшего МФЦ: <a href="https://мфц.рф" target="_blank">мфц.рф</a></p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h3>ИНН</h3>
+            <div class="content">
+                <p>Налоговая инспекция или через сайт ФНС.</p>
+                <p>Сайт: <a href="https://www.nalog.ru" target="_blank">www.nalog.ru</a></p>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h3>СНИЛС</h3>
+            <div class="content">
+                <p>МФЦ или Пенсионный фонд.</p>
+                <p>Сайт: <a href="https://www.pfrf.ru" target="_blank">www.pfrf.ru</a></p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© 2025 Работа для подростков. Все права защищены.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            const dateString = `обновлено ${day}.${month}.${year}`;
+            document.getElementById('update-date').textContent = dateString;
+
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

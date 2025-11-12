@@ -3,36 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документы для трудоустройства подростков</title>
+    <title>Документы для трудоустройства</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
         <h1>Документы для трудоустройства</h1>
+        <p id="update-date">Список необходимых документов</p>
     </header>
     <nav>
-        <a href="index.html">Главная</a>
-        <a href="jobs.html">Виды работ</a>
-        <a href="documents.html">Документы</a>
-        <a href="where-to-get.html">Где получить</a>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="jobs.html">Виды работ</a></li>
+            <li><a href="documents.html">Документы</a></li>
+            <li><a href="where-to-get.html">Где получить</a></li>
+        </ul>
     </nav>
     <main>
-        <section>
-            <h2>Какие документы нужны</h2>
-            <ul>
-                <li><strong>Паспорт</strong> (или свидетельство о рождении, если нет паспорта)</li>
-                <li><strong>ИНН</strong> (идентификационный номер налогоплательщика)</li>
-                <li><strong>СНИЛС</strong> (страховое свидетельство)</li>
-                <li><strong>Справка из школы/колледжа</strong> (если учишься)</li>
-                <li><strong>Медицинская справка</strong> (для некоторых видов работ)</li>
-                <li><strong>Согласие родителей</strong> (если тебе нет 18 лет)</li>
-            </ul>
-        </section>
+        <div class="section-card">
+            <h3>Основные документы</h3>
+            <div class="content">
+                <ul>
+                    <li><strong>Паспорт</strong> (или свидетельство о рождении, если нет паспорта)</li>
+                    <li><strong>ИНН</strong> (идентификационный номер налогоплательщика)</li>
+                    <li><strong>СНИЛС</strong> (страховое свидетельство)</li>
+                    <li><strong>Справка из школы/колледжа</strong> (если учишься)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-card">
+            <h3>Дополнительные документы</h3>
+            <div class="content">
+                <ul>
+                    <li><strong>Медицинская справка</strong> (для некоторых видов работ)</li>
+                    <li><strong>Согласие родителей</strong> (если тебе нет 18 лет)</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© 2025 Работа для подростков. Все права защищены.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            const dateString = `обновлено ${day}.${month}.${year}`;
+            document.getElementById('update-date').textContent = dateString;
+
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

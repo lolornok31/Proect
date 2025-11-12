@@ -3,30 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Работа для подростков — главная</title>
+    <title>Работа для подростков</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <header>
         <h1>Работа для подростков</h1>
-        <p>Узнай, где можно работать, какие документы нужны и где их получить</p>
+        <p id="update-date">Узнай, где можно работать и как оформить документы</p>
     </header>
     <nav>
-        <a href="jobs.html">Виды работ</a>
-        <a href="documents.html">Документы</a>
-        <a href="where-to-get.html">Где получить</a>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="jobs.html">Виды работ</a></li>
+            <li><a href="documents.html">Документы</a></li>
+            <li><a href="where-to-get.html">Где получить</a></li>
+        </ul>
     </nav>
     <main>
-        <section>
-            <h2>Добро пожаловать!</h2>
-            <p>На нашем сайте ты найдёшь информацию о том, где можно работать подросткам, какие документы нужны для трудоустройства и где их получить.</p>
-            <p>Выбери нужный раздел в меню выше.</p>
-        </section>
+        <div class="section-card">
+            <h3>О сайте</h3>
+            <div class="content">
+                <p>На нашем сайте ты найдёшь актуальные вакансии для подростков, информацию о необходимых документах и адреса, где их можно оформить.</p>
+                <p>Выбери раздел в меню выше, чтобы узнать подробности!</p>
+            </div>
+        </div>
     </main>
     <footer>
         <p>© 2025 Работа для подростков. Все права защищены.</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const year = today.getFullYear();
+            const dateString = `обновлено ${day}.${month}.${year}`;
+            document.getElementById('update-date').textContent = dateString;
+
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
