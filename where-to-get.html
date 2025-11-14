@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Где получить документы</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -58,8 +58,10 @@
             document.getElementById('update-date').textContent = dateString;
 
             document.querySelectorAll('.section-card').forEach(card => {
-                card.addEventListener('click', function() {
-                    this.classList.toggle('active');
+                card.addEventListener('click', function(e) {
+                    if (e.target.tagName !== 'A') {
+                        this.classList.toggle('active');
+                    }
                 });
             });
         });
