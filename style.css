@@ -1,4 +1,4 @@
-/* Black & Red Wave Design (Fixed) */
+/* Pure Black & Red Wave Design (Centered) */
 :root {
     --primary-color: #1a1a1a;
     --secondary-color: #e74c3c;
@@ -12,6 +12,7 @@
     --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     --border-radius: 8px;
     --transition: all 0.4s ease;
+    --max-width: 900px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
@@ -26,42 +27,32 @@ body {
     overflow-x: hidden;
 }
 
-/* Волнистый фон для header */
-header {
-    position: relative;
-    background: var(--primary-color);
-    padding: 5rem 1rem 3rem;
-    text-align: center;
-    overflow: hidden;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Контейнер для центрирования */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
     width: 100%;
-    height: 100px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 C300,120 600,0 900,60 C1050,90 1200,60 1200,60 L1200,120 L0,120 Z" fill="%23c0392b"/></svg>');
-    background-repeat: repeat-x;
-    transform: translateY(50%);
 }
 
-/* Исправленная навигация */
+/* Навигация (вверху, на всю ширину экрана) */
 nav {
     position: relative;
     background: linear-gradient(90deg, #3d0000, #8b0000, #3d0000);
     padding: 0;
     z-index: 100;
     height: 60px;
+    width: 100%;
+    top: 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     height: 100%;
+    max-width: var(--max-width);
 }
 
 nav li {
@@ -101,16 +92,78 @@ nav::after {
     background-repeat: repeat-x;
 }
 
+/* Header */
+header {
+    position: relative;
+    background: var(--primary-color);
+    padding: 3rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: var(--font-headings);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: rgba(236, 240, 241, 0.9);
+}
+
 /* Основной контент */
 main {
     position: relative;
-    padding: 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--dark-color);
+    padding: 3rem 0;
+    width: 100%;
 }
 
-/* Карточки с анимацией */
+/* Мотивационный блок (только для index.html) */
+.motivation-container {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+.motivation-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.motivation-text h2 {
+    color: #e74c3c;
+    font-family: var(--font-headings);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.highlight {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.cta {
+    color: #e74c3c;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    display: block;
+}
+
+.teen-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+/* Карточки с анимацией (для jobs.html, documents.html, where-to-get.html) */
 .section-card {
     margin-bottom: 2rem;
     background: rgba(26, 26, 26, 0.8);
@@ -187,22 +240,10 @@ tr:hover {
 footer {
     position: relative;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     background: var(--primary-color);
     color: rgba(236, 240, 241, 0.8);
     border-top: 1px solid rgba(231, 76, 60, 0.3);
-}
-
-/* Волна над футером */
-footer::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40"><path d="M0,20 C300,40 600,0 900,20 C1050,30 1200,20 1200,20 L1200,40 L0,40 Z" fill="%231a1a1a"/></svg>');
-    background-repeat: repeat-x;
 }
 
 /* Адаптивность */

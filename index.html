@@ -6,33 +6,82 @@
     <title>Работа для подростков</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .motivation-container {
+            text-align: center;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+        }
+        .motivation-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .motivation-text h2 {
+            color: #e74c3c;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        .highlight {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        .cta {
+            color: #e74c3c;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            display: block;
+        }
+        .teen-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 1rem auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Работа для подростков</h1>
-        <p id="update-date">Узнай, где можно работать и как оформить документы</p>
-    </header>
-<nav>
-    <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="jobs.html">Виды работ</a></li>
-        <li><a href="documents.html">Документы</a></li>
-        <li><a href="where-to-get.html">Где получить</a></li>
-    </ul>
-</nav>
-
-    <main>
-        <div class="section-card">
-            <h3>О сайте</h3>
-            <div class="content">
-                <p>На нашем сайте ты найдёшь актуальные вакансии для подростков, информацию о необходимых документах и адреса, где их можно оформить.</p>
-                <p>Выбери раздел в меню выше, чтобы узнать подробности!</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="jobs.html">Виды работ</a></li>
+            <li><a href="documents.html">Документы</a></li>
+            <li><a href="where-to-get.html">Где получить</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Работа для подростков</h1>
+            <p id="update-date">обновлено 23.11.2025</p>
+        </header>
+        <main>
+            <div class="motivation-container">
+                <h2>Ты уже готов зарабатывать?</h2>
+                <p class="motivation-text">
+                    Большинство подростков <span class="highlight">уже сейчас хотят иметь свои деньги</span>, но не знают, с чего начать.
+                    Ты тоже мечтаешь о финансовой независимости? Тогда ты на правильном пути!
+                </p>
+                <img src="https://mistralaichatupprodswe.blob.core.windows.net/chat-images/cb/7a/b4/cb7ab4a3-56b4-42b8-a14f-9732dd76f483/2e7232da-7b24-4ba8-91bf-58244004296b/7aaa18e2-09d8-4d78-a4ec-3fc4a61afd53?sv=2025-01-05&st=2025-11-29T09%3A14%3A22Z&se=2025-11-29T10%3A14%3A22Z&sr=b&sp=rade&sig=imoqKgz67XNpj1gVHqRz%2F2ptljUhd8f667RmdescigE%3D" alt="Подросток за компьютером" class="teen-image">
+                <p class="motivation-text">
+                    На нашем сайте ты найдёшь <span class="highlight">актуальные вакансии</span>, которые подойдут именно тебе.
+                    Мы расскажем, <span class="highlight">как официально трудоустроиться с 14 лет</span>, какие документы нужны и где их получить.
+                </p>
+                <p class="motivation-text">
+                    Не откладывай на завтра — <span class="highlight">первые деньги можно заработать уже сегодня</span>!
+                    Выбери раздел в меню и начни действовать!
+                </p>
+                <span class="cta">Твоя финансовая свобода начинается здесь!</span>
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>© 2025 Работа для подростков. Все права защищены.</p>
-    </footer>
+        </main>
+        <footer>
+            <p>© 2025 Работа для подростков. Все права защищены.</p>
+        </footer>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const today = new Date();
@@ -41,14 +90,6 @@
             const year = today.getFullYear();
             const dateString = `обновлено ${day}.${month}.${year}`;
             document.getElementById('update-date').textContent = dateString;
-
-            document.querySelectorAll('.section-card').forEach(card => {
-                card.addEventListener('click', function(e) {
-                    if (e.target.tagName !== 'A') {
-                        this.classList.toggle('active');
-                    }
-                });
-            });
         });
     </script>
 </body>
