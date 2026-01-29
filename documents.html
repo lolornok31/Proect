@@ -2,69 +2,89 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Документы для трудоустройства</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="jobs.html">Виды работ</a></li>
-            <li><a href="documents.html">Документы</a></li>
-            <li><a href="where-to-get.html">Где получить</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <header>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Работа Подросткам</a>
+            <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="jobs.html" class="nav-link">Виды работ</a></li>
+                    <li><a href="documents.html" class="nav-link active">Документы</a></li>
+                    <li><a href="where-to-get.html" class="nav-link">Где взять документы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="breadcrumb">
+            <a href="index.html">Главная</a> &raquo; Документы для трудоустройства
+        </div>
+
+        <div class="header-with-bg">
             <h1>Документы для трудоустройства</h1>
             <p id="update-date">Список необходимых документов</p>
-        </header>
-        <main>
-            <div class="section-card">
-                <h3>Основные документы</h3>
-                <div class="content">
-                    <ul>
-                        <li><strong>Паспорт</strong> (или свидетельство о рождении, если нет паспорта)</li>
-                        <li><strong>ИНН</strong> (идентификационный номер налогоплательщика)</li>
-                        <li><strong>СНИЛС</strong> (страховое свидетельство)</li>
-                        <li><strong>Справка из школы/колледжа</strong> (если учишься)</li>
-                    </ul>
-                </div>
-            </div>
+        </div>
 
-            <div class="section-card">
-                <h3>Дополнительные документы</h3>
-                <div class="content">
-                    <ul>
-                        <li><strong>Медицинская справка</strong> (для некоторых видов работ)</li>
-                        <li><strong>Согласие родителей</strong> (если тебе нет 18 лет)</li>
-                    </ul>
+        <main>
+            <div class="documents-list">
+                <h2>Необходимые документы</h2>
+                <div class="documents-grid">
+                    <div class="document-item">
+                        <h3>1. Паспорт</h3>
+                        <p>Основной документ, удостоверяющий личность. Можно получить с 14 лет в МФЦ или паспортном столе.</p>
+                    </div>
+                    <div class="document-item">
+                        <h3>2. ИНН</h3>
+                        <p>Идентификационный номер налогоплательщика. Оформляется в налоговой инспекции или через сайт ФНС.</p>
+                    </div>
+                    <div class="document-item">
+                        <h3>3. СНИЛС</h3>
+                        <p>Страховое свидетельство. Оформляется в Пенсионном фонде или МФЦ.</p>
+                    </div>
+                    <div class="document-item">
+                        <h3>4. Справка из учебного заведения</h3>
+                        <p>Подтверждает, что вы совмещаете работу с учебой. Получается в школе или колледже.</p>
+                    </div>
+                    <div class="document-item">
+                        <h3>5. Согласие родителей</h3>
+                        <p>Обязательно для подростков до 18 лет. Оформляется у нотариуса.</p>
+                    </div>
+                    <div class="document-item">
+                        <h3>6. Медицинская справка</h3>
+                        <p>Требуется для некоторых видов работ. Оформляется в поликлинике.</p>
+                    </div>
                 </div>
             </div>
         </main>
-        <footer>
-            <p>© 2025 Работа для подростков. Все права защищены.</p>
-        </footer>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const today = new Date();
-            const day = String(today.getDate()).padStart(2, '0');
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const year = today.getFullYear();
-            const dateString = `обновлено ${day}.${month}.${year}`;
-            document.getElementById('update-date').textContent = dateString;
 
-            document.querySelectorAll('.section-card').forEach(card => {
-                card.addEventListener('click', function(e) {
-                    if (e.target.tagName !== 'A') {
-                        this.classList.toggle('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <footer>
+        <div class="social-links">
+            <a href="https://t.me/lolornok" class="social-link">
+                <i class="fab fa-telegram"></i>
+                Telegram: @lolornok
+            </a>
+            <a href="https://vk.com/lolornok" class="social-link">
+                <i class="fab fa-vk"></i>
+                VK: https://vk.com/lolornok
+            </a>
+        </div>
+        <p>© 2025 Работа для подростков. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
