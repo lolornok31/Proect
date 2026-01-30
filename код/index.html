@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Работа для подростков</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Работа Подросткам</a>
+            <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="main-nav" aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Главная</a></li>
+                    <li><a href="jobs.html" class="nav-link">Виды работ</a></li>
+                    <li><a href="documents.html" class="nav-link">Документы</a></li>
+                    <li><a href="where-to-get.html" class="nav-link">Где взять документы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-container">
+        <div class="header-with-bg">
+            <h1>Работа для подростков</h1>
+            <p id="update-date">обновлено 23.12.2025</p>
+        </div>
+
+        <main>
+            <div class="motivation-text">
+                <h2>Ты уже готов зарабатывать?</h2>
+                <p>Большинство подростков <span class="highlight">уже сейчас хотят иметь свои деньги</span>, но не знают, с чего начать. Ты тоже мечтаешь о финансовой независимости? Тогда ты на правильном пути!</p>
+
+                <p>На нашем сайте ты найдёшь <span class="highlight">актуальные вакансии</span>, которые подойдут именно тебе. Мы расскажем, <span class="highlight">как официально трудоустроиться с 14 лет</span>, какие документы нужны и где их получить.</p>
+
+                <p>Не откладывай на завтра — <span class="highlight">первые деньги можно заработать уже сегодня</span>! Выбери раздел в меню и начни действовать!</p>
+
+                <span class="cta" onclick="window.location.href='jobs.html'">
+                    Твоя финансовая свобода начинается здесь!
+                </span>
+            </div>
+
+            <section class="poll-section">
+                <h2>Результаты опроса о трудоустройстве подростков</h2>
+                <div class="poll-container">
+                    <div class="poll-chart">
+                        <canvas id="pollChart"></canvas>
+                    </div>
+                    <div class="poll-legend">
+                        <div class="legend-item">
+                            <div class="legend-color color-red"></div>
+                            <span>С какого возраста можно трудоустраиваться - 35%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color color-blue"></div>
+                            <span>Знают как трудоустроиться - 10%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color color-green"></div>
+                            <span>Знают кто помогает с трудоустройством - 25%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color color-purple"></div>
+                            <span>Знают куда обратиться - 5%</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color color-cyan"></div>
+                            <span>Хотят трудоустроиться - 25%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="help-section">
+                <h2>Чем мы поможем подростку?</h2>
+                <p>На нашем сайте ты найдёшь всю необходимую информацию для успешного трудоустройства и получишь поддержку на каждом этапе.</p>
+                <div class="help-grid">
+                    <div class="help-item">
+                        <h3><i class="fas fa-clipboard-list"></i> Пошаговые инструкции</h3>
+                        <p>Подробные руководства по оформлению всех необходимых документов: паспорта, ИНН, СНИЛС и согласия родителей.</p>
+                    </div>
+                    <div class="help-item">
+                        <h3><i class="fas fa-map-marked-alt"></i> Актуальные вакансии</h3>
+                        <p>Список проверенных вакансий для подростков от 14 лет с указанием зарплат, условий работы и контактов работодателей.</p>
+                    </div>
+                    <div class="help-item">
+                        <h3><i class="fas fa-file-alt"></i> Образцы документов</h3>
+                        <p>Готовые шаблоны резюме, заявлений и согласий родителей, которые можно скачать и использовать.</p>
+                    </div>
+                    <div class="help-item">
+                        <h3><i class="fas fa-address-book"></i> Контакты организаций</h3>
+                        <p>Адреса и телефоны МФЦ, Центров занятости, Пенсионного фонда и Налоговой службы по всей России.</p>
+                    </div>
+                    <div class="help-item">
+                        <h3><i class="fas fa-balance-scale"></i> Юридическая поддержка</h3>
+                        <p>Разъяснения по трудовому законодательству: права подростков, рабочее время, оплата труда и условия работы.</p>
+                    </div>
+                    <div class="help-item">
+                        <h3><i class="fas fa-lightbulb"></i> Советы по трудоустройству</h3>
+                        <p>Рекомендации как успешно пройти собеседование, как вести себя на работе и как строить карьеру.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://t.me/lolornok" class="social-link">
+                <i class="fab fa-telegram"></i>
+                Telegram: @lolornok
+            </a>
+            <a href="https://vk.com/lolornok" class="social-link">
+                <i class="fab fa-vk"></i>
+                VK: https://vk.com/lolornok
+            </a>
+        </div>
+        <p>© 2025 Работа для подростков. Все права защищены.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
