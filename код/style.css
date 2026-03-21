@@ -295,44 +295,7 @@ body {
     color: var(--primary-color);
 }
 
-.poll-section {
-    background-color: rgba(26, 26, 26, 0.7);
-    border: 1px solid rgba(255, 107, 107, 0.2);
-    border-radius: var(--border-radius);
-    padding: 2.5rem;
-    margin: 3rem 0;
-    box-shadow: var(--shadow);
-}
 
-.poll-section h2 {
-    font-family: var(--font-headings);
-    font-size: 1.8rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.poll-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-    margin-top: 2rem;
-}
-
-.poll-chart {
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
-.poll-legend {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 350px;
-    min-width: 280px;
-}
 
 .legend-item {
     display: flex;
@@ -614,17 +577,8 @@ footer {
         font-size: 1.75rem;
     }
 
-    .poll-container {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .poll-chart {
-        width: 100%;
-        max-width: 280px;
-        height: 280px;
-        margin: 0 auto;
-    }
+
 
     .help-grid, .documents-grid {
         grid-template-columns: 1fr;
